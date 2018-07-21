@@ -1,0 +1,1 @@
+H:\Personal\Code\Repos\Publisher\PublisherServiceConsole\bin\Debug\PublisherServiceConsole.exe.config
