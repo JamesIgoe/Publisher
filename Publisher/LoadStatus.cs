@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.IO;
+﻿using System.Data;
 using System.Runtime.Serialization;
-using System.Xml;
-using System.Data;
 
 namespace Publisher
 {
