@@ -45,5 +45,7 @@ Temporary Items
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
+
+# avoid bin debug files
 bin/
 obj/
