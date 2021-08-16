@@ -1,0 +1,6 @@
+C:\Users\igoej\Source\Repos\Publisher\Publisher\bin\Debug\Publisher.dll
+C:\Users\igoej\Source\Repos\Publisher\Publisher\bin\Debug\Publisher.pdb
+C:\Users\igoej\Source\Repos\Publisher\Publisher\obj\Debug\Publisher.csprojAssemblyReference.cache
+C:\Users\igoej\Source\Repos\Publisher\Publisher\obj\Debug\Publisher.csproj.CoreCompileInputs.cache
+C:\Users\igoej\Source\Repos\Publisher\Publisher\obj\Debug\Publisher.dll
+C:\Users\igoej\Source\Repos\Publisher\Publisher\obj\Debug\Publisher.pdb
