@@ -262,7 +262,13 @@ namespace Publisher
         /// <returns></returns>
         public DataSet GetLoadStatusByDate(string viewDate)
         {
-            return _LoadData.GetLoadStatusByDate(viewDate);
+                    // Validate the date string before creating the parameter
+            if (!DateTime.TryParseExact(viewDate, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDate))
+            {
+                // Handle invalid date format
+                throw new ArgumentException("Invalid date format");            
+            }
+            return _LoadData.GetLoadStatusByDate(parsedDate.ToString("yyyy-MM-dd"));
         }
 
         /// <summary>
