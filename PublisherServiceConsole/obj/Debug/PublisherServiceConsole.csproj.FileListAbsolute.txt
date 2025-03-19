@@ -5,6 +5,6 @@ C:\Users\igoej\Source\Repos\Publisher\PublisherServiceConsole\bin\Debug\Publishe
 C:\Users\igoej\Source\Repos\Publisher\PublisherServiceConsole\bin\Debug\Publisher.pdb
 C:\Users\igoej\Source\Repos\Publisher\PublisherServiceConsole\obj\Debug\PublisherServiceConsole.csproj.AssemblyReference.cache
 C:\Users\igoej\Source\Repos\Publisher\PublisherServiceConsole\obj\Debug\PublisherServiceConsole.csproj.CoreCompileInputs.cache
-C:\Users\igoej\Source\Repos\Publisher\PublisherServiceConsole\obj\Debug\PublisherServiceConsole.csproj.CopyComplete
 C:\Users\igoej\Source\Repos\Publisher\PublisherServiceConsole\obj\Debug\PublisherServiceConsole.exe
 C:\Users\igoej\Source\Repos\Publisher\PublisherServiceConsole\obj\Debug\PublisherServiceConsole.pdb
+C:\Users\igoej\Source\Repos\Publisher\PublisherServiceConsole\obj\Debug\Publishe.7D8C0CA6.Up2Date

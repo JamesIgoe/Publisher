@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
+using System.Globalization;
 using System.Net;
 using System.ServiceModel;
 using System.Threading;
@@ -428,6 +429,10 @@ namespace Publisher
         {
             if (_IsConnected == true)
             {
+                if (!Publisher.IsValidDate(viewDate))
+                {
+                    throw new ArgumentException("Invalid date format. Please provide a valid date string.");
+                }
                 return _Publisher.GetLoadStatusByDate(viewDate);
             }
             else
@@ -446,6 +451,10 @@ namespace Publisher
         {
             if (_IsConnected == true)
             {
+                if (!Publisher.IsValidDate(viewDate))
+                {
+                    throw new ArgumentException("Invalid date format. Please provide a valid date string.");
+                }
                 return _Publisher.GetLoadStatusBySource(viewDate);
             }
             else

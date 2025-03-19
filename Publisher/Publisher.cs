@@ -262,13 +262,11 @@ namespace Publisher
         /// <returns></returns>
         public DataSet GetLoadStatusByDate(string viewDate)
         {
-                    // Validate the date string before creating the parameter
-            if (!DateTime.TryParseExact(viewDate, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDate))
+            if (!IsValidDate(viewDate))
             {
-                // Handle invalid date format
-                throw new ArgumentException("Invalid date format");            
+                throw new ArgumentException("Invalid date format. Please provide a valid date string.");
             }
-            return _LoadData.GetLoadStatusByDate(parsedDate.ToString("yyyy-MM-dd"));
+            return _LoadData.GetLoadStatusByDate(viewDate);
         }
 
         /// <summary>
@@ -279,6 +277,10 @@ namespace Publisher
         /// <returns></returns>
         public DataSet GetLoadStatusBySource(string viewDate)
         {
+            if (!IsValidDate(viewDate))
+            {
+                throw new ArgumentException("Invalid date format. Please provide a valid date string.");
+            }
             return _LoadData.GetLoadStatusBySource(viewDate);
         }
 
@@ -290,6 +292,10 @@ namespace Publisher
         /// <returns></returns>
         public DataSet GetLoadStatusByRegion(string viewDate)
         {
+            if (!IsValidDate(viewDate))
+            {
+                throw new ArgumentException("Invalid date format. Please provide a valid date string.");
+            }
             return _LoadData.GetLoadStatusByRegion(viewDate);
         }
 
@@ -526,6 +532,26 @@ namespace Publisher
             {
                 _MessageLog.Add(new Message(_EventSourceName, _Host, EventLogEntryType.Error, "Error in Stop: " + ex.Message));
             }
+        }
+
+        #endregion
+
+
+        #region helper
+
+        /// <summary>
+        /// Validates the date string to ensure it is in the correct format (yyyy-MM-dd)
+        /// </summary>
+        /// <param name="dateString"></param>
+        /// <returns></returns>
+        public static bool IsValidDate(string dateString)
+        {
+            if (!DateTime.TryParseExact(dateString, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDate))
+            {
+                return false;
+            }
+
+            return true;
         }
 
         # endregion
