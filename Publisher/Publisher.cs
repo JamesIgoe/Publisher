@@ -266,7 +266,8 @@ namespace Publisher
             {
                 throw new ArgumentException("Invalid date format. Please provide a valid date string.");
             }
-            return _LoadData.GetLoadStatusByDate(viewDate);
+            DateTime parsedDate = DateTime.ParseExact(viewDate, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+            return _LoadData.GetLoadStatusByDate(parsedDate);
         }
 
         /// <summary>
@@ -281,7 +282,8 @@ namespace Publisher
             {
                 throw new ArgumentException("Invalid date format. Please provide a valid date string.");
             }
-            return _LoadData.GetLoadStatusBySource(viewDate);
+            DateTime parsedDate = DateTime.ParseExact(viewDate, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+            return _LoadData.GetLoadStatusBySource(parsedDate);
         }
 
         /// <summary>
@@ -296,7 +298,8 @@ namespace Publisher
             {
                 throw new ArgumentException("Invalid date format. Please provide a valid date string.");
             }
-            return _LoadData.GetLoadStatusByRegion(viewDate);
+            DateTime parsedDate = DateTime.ParseExact(viewDate, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+            return _LoadData.GetLoadStatusByRegion(parsedDate);
         }
 
         # endregion

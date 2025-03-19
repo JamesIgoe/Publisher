@@ -67,9 +67,11 @@ namespace Publisher
         /// <param name="viewDate"></param>
         /// <param name="viewRequested"></param>
         /// <returns></returns>
-        public DataSet GetLoadStatusByDate(string viewDate)
+        public DataSet GetLoadStatusByDate(DateTime viewDate)
         {
-            string sql = ReplaceViewDate(_SliceDataSQLForDates, viewDate);
+            // Convert DateTime to string in the format YYYYMMDD
+            string viewDateString = viewDate.ToString("yyyy-MM-dd");
+            string sql = ReplaceViewDate(_SliceDataSQLForDates, viewDateString);
             return ExecuteSQL(sql);
         }
 
@@ -79,9 +81,11 @@ namespace Publisher
         /// <param name="viewDate"></param>
         /// <param name="viewRequested"></param>
         /// <returns></returns>
-        public DataSet GetLoadStatusBySource(string viewDate)
+        public DataSet GetLoadStatusBySource(DateTime viewDate)
         {
-            string sql = ReplaceViewDate(_SliceDataSQLForSource, viewDate);
+            // Convert DateTime to string in the format YYYYMMDD
+            string viewDateString = viewDate.ToString("yyyy-MM-dd");
+            string sql = ReplaceViewDate(_SliceDataSQLForDates, viewDateString);
             return ExecuteSQL(sql);
         }
 
@@ -91,9 +95,11 @@ namespace Publisher
         /// <param name="viewDate"></param>
         /// <param name="viewRequested"></param>
         /// <returns></returns>
-        public DataSet GetLoadStatusByRegion(string viewDate)
+        public DataSet GetLoadStatusByRegion(DateTime viewDate)
         {
-            string sql = ReplaceViewDate(_SliceDataSQLForRegion, viewDate);
+            // Convert DateTime to string in the format YYYYMMDD
+            string viewDateString = viewDate.ToString("yyyy-MM-dd");
+            string sql = ReplaceViewDate(_SliceDataSQLForDates, viewDateString);
             return ExecuteSQL(sql);
         }
         #endregion
